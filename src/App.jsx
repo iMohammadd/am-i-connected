@@ -11,7 +11,7 @@ const App = () => {
     volume: 1
   })
   const getIp = () => {
-    axios.get('http://icanhazip.com/', {
+    axios.get('https://icanhazip.com/', {
       headers: {
         Accept: 'application/json'
       }
