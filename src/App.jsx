@@ -11,13 +11,15 @@ const App = () => {
     volume: 1
   })
   const getIp = () => {
-    axios.get('https://ifconfig.me')
+    axios.get('https://ifconfig.io/ip')
     .then(response => {
       setError(false)
       setIp(response.data)
     })
     .catch(error => {
       setError(true)
+      setIp("!!")
+      console.log(error)
       play()
     })
   }
