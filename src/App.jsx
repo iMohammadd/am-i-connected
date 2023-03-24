@@ -11,7 +11,11 @@ const App = () => {
     volume: 1
   })
   const getIp = () => {
-    axios.get('https://ifconfig.io/ip')
+    axios.get('http://icanhazip.com/', {
+      headers: {
+        Accept: 'application/json'
+      }
+    })
     .then(response => {
       setError(false)
       setIp(response.data)
